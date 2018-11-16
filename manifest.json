@@ -1,8 +1,8 @@
 {
     "short_name": "Lanches",
-    "author": "Lucas Marques Dutra",
+    "author": "Adriano Silva",
     "name": "Peça lanches pelo WhatApp",
-    "start_url": "https://terremoth.github.io/lanchepelowhats/?utm_source=homescreen",
+    "start_url": "https://slivadrip.github.io/lanchepelowhats/",
     "background_color": "#F44336",
     "Theme_color": "#F44336",
     "display": "standalone",
