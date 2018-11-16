@@ -1,127 +1,131 @@
 <!DOCTYPE html>
-<!-- 
-    Author: Lucas Marques Dutra <dutra.astro@gmail.com> (c) 2018
-    
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>
--->
 <html lang="pt-br">
-    <head>
-        <title>Lanche pelo WhatsApp</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link media="all" href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-        <link rel="shortcut icon" href="http://www.icons101.com/icon_ico/id_13859/burger.ico" type="image/x-icon" />
-        <meta name="description" content="Peça lanche facilmente pelo WhatsApp com essa ferramenta" />
-        <meta name="keywords" content="lanche, whatsapp, whats, comida, hamburger" />
-        <meta name="robots" content="index, follow" />
-        <link rel="manifest" href="manifest.json">
-        <style>*{font-family: "Open Sans", sans-serif;}</style>
-    </head>
-    <body>
-        <h1>Peça seu lanche</h1>
-        <h6>* Para a aplicação funcionar, você precisa estar logado no WhatsApp Web</h6>
-<!--        <p>
-            Lembrar minhas escolhas: <input type="checkbox">        
-        </p>-->
+<head>
+    <title>Lanche pelo WhatsApp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link media="all" href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="shortcut icon" href="http://www.icons101.com/icon_ico/id_13859/burger.ico" type="image/x-icon" />
+    <meta name="description" content="Peça lanche facilmente pelo WhatsApp com essa ferramenta" />
+    <meta name="keywords" content="lanche, whatsapp, whats, comida, hamburger" />
+    <meta name="robots" content="index, follow" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">Peça Seu Lanche</h4>
+                        <p class="text-muted">Gosta de pedir lanches pelo WhatsApp? Pois fazer isto nunca foi tão
+                            fácil.
+                        </p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Contato</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Twitter</a></li>
+                            <li><a href="#" class="text-white">Facebook</a></li>
+                            <li><a href="#" class="text-white">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <img src="http://www.icons101.com/icon_ico/id_13859/burger.ico">
+                    <strong> Peça seu Lanche</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main role="main">
+    <div class="container">
+        <h1 class="h1-lanche">Peça seu lanche</h1>
+        <h6 class="text-center">* Para a aplicação funcionar, você precisa estar logado no WhatsApp Web</h6>
+      
         <fieldset>
-            <legend>Personalizar</legend>
-            Número da lanchonete: <input title='Não precisa colocar o "55" nem "+55"' type="tel" class="tel" placeholder="DDD + número">
-            <br><br>
-            Mensagem:<br>
-            <textarea class="msg" rows="4" cols="40" placeholder="Personalize sua mensagem: ex.: Olá, gostaria de fazer um pedido">Olá, gostaria de fazer um pedido:</textarea>
+            <div class="row">
+                <legend class="text-center" style="text-transform: uppercase; font-weight: 900;">Personalizar</legend>
+                <div class="col-md-6">
+                    <label class="label-lanche">Número da lanchonete:</label>
+                    <input title='Não precisa colocar o "55" nem "+55"' type="tel" class="tel form-control"
+                    placeholder="DDD + número">
+                </div>
+                <div class="col-md-6">
+                    <label class="label-lanche">Lanche(s):</label>
+                    <select class="lanche form-control"></select>
+                </div>
+            </div>
+
             <hr>
-            Lanche(s): 
-            <select class="lanche"></select>
-            <br><br>
-            <strong>Retirar itens</strong>: <br>
-            <select multiple="multiple" size="15" class="itens"></select>
-            <br><br>
-            Mensagem posterior adicional:<br>
-            <textarea class="msg-complementar" rows="4" cols="40" placeholder="ex.: Quanto tempo até a entrega?">Quanto tempo até a entrega?</textarea>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label class="label-lanche"> Mensagem:<br></label>
+                    <textarea class="msg form-control" rows="4" cols="40" placeholder="Personalize sua mensagem: ex.: Olá, gostaria de fazer um pedido">Olá, gostaria de fazer um pedido:</textarea>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="label-lanche">Retirar itens:</label> <br>
+                    <select multiple="multiple" size="10" class="itens form-control"></select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="label-lanche">Mensagem posterior adicional:</label><br>
+                    <textarea class="msg-complementar form-control" rows="10" cols="40" placeholder="ex.: Quanto tempo até a entrega?">Quanto tempo até a entrega?</textarea>
+
+                </div>
+
+            </div>
+            <br>
+
         </fieldset>
-        <h4>Resultado final:</h4>
-        <output></output>
-        <br><br>
-        <button class="pedir" type="button">Pedir Lanche!</button>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h4>Resultado final:</h4>
+                <output class="alert alert-primary"></output>
+                <br><br>
+                <button class="btn btn-success pedir btn-lanche" type="button">Pedir Lanche!</button>
+
+            </div>
+        </div>
         <br>
         <br>
-        <footer>
-        <br><br><br><br>
-        Views <a href="http://www.reliablecounter.com" target="_blank"><img src="https://www.reliablecounter.com/count.php?page=terremoth.github.io/lanchepelowhats&digit=style/plain/3/&reloads=1" alt="" title="" border="0"></a>
-        <hr />
-        Criado por Lucas M. Dutra - <a href="mailto:dutra.astro@gmail.com">Email</a> | <a href="https://github.com/terremoth">GitHub</a> | <a href="https://facebook.com/0day1337">Facebook</a>
-        <br>
-        <small><a href="http://bit.ly/lanche-whats">Shortlink para esta página</a> - Pax Profundis</small>
+    </div>
+</main>
+<footer class="text-center bg-dark text-light"">
 
-        </footer>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script>
-            var lanches = ['X-Burger', 'X-Salada', 'X-Egg', 'X-Frango', 'X-Calabresa', 'X-Bacon', 'X-Dog', 'X-Tudo', 'Cachorro quente normal', 'Cachorro quente prensado'];
-            var itens   = ['pão', 'carne', 'queijo', 'presunto', 'frango', 'bacon', 'calabresa', 'salsicha', 'ovo', 'ovo de codorna', 'alface', 'tomate', 'cebola', 'pepino', 'cenoura', 'milho', 'ervilha', 'maionese', 'ketchup', 'cheddar', 'catupiry', 'queijo ralado'];
-            
-            $(function() {
-                lanches.forEach(function (item) {
-                    $('.lanche').append("<option value='"+item+"'>"+item+"</option>");
-                });
-                
-                itens.forEach(function (item) {
-                    $('.itens').append("<option value='"+item+"'>"+item+"</option>");
-                });        
-                
-                $('select[multiple] > option').mousedown(function(e) {
-                    e.preventDefault();
-                    var originalScrollTop = $(this).parent().scrollTop();
-                    $(this).prop('selected', $(this).prop('selected') ? false : true);
-                    var self = this;
-                    $(this).parent().focus();
-                    setTimeout(function() {
-                        $(self).parent().scrollTop(originalScrollTop);
-                    }, 0);
+    <hr />
+       <br>
+    Lanche pelo WhatsApp - <a href="mailto:slivadrip@gmail.com" class="text-light">Email</a> | <a href="https://github.com/slivadrip">GitHub</a>
+    | <a href="https://facebook.com/slivadrip">Facebook</a>
+    <br>
+    <br>
 
-                    return false;
-                });
-                
-                $('.lanche,.itens,textarea').change(montaPedido);
-                $('.lanche,.itens').click(montaPedido);
-                
-                function montaPedido() {
-                    var textComposer = $('.msg').val()+" um "+$('.lanche').val();
-                    var retirar = $('.itens').val();
+</footer>
 
-                    if (retirar) {
-                        retirar.forEach(function(item) {
-                            textComposer += " sem "+item+";"
-                        });
-                    }
-                    
-                    textComposer += " "+$('.msg-complementar').val();
-                    
-                    $('output').html(textComposer);
-                }  
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+<script src="assets/js/vendor/jquery-slim.min.js"></script>
+<script src="assets/js/vendor/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 
-                montaPedido();
-                
-                $('.pedir').click(function () {
-                    var tel = $('.tel').val();
-                    if (!tel) {
-                        return alert("O número do telefone é obrigatório!");
-                    } 
-                    var tel = tel.replace(/[^\d]/g, '');
-                    var api = window.open("https://api.whatsapp.com/send?phone=55"+tel+"&text="+$('output').html());
-                });
-            });
-            
-        </script>
-    </body>
+
+</body>
+
 </html>

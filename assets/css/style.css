@@ -1,0 +1,20 @@
+*{font-family: "Open Sans", sans-serif;}
+.h1-lanche {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.btn-lanche{
+        padding-left: 30px !important;
+        padding-right: 40px !important;
+        text-transform: uppercase !important;
+        font-weight: bold !important;
+    }
+
+    
+.label-lanche{
+    font-weight: 600;
+}
